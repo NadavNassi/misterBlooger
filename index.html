@@ -19,7 +19,7 @@
             <div class="logo">Blogin</div>
             <ul class="main-nav flex space-between align-center clean-list">
                 <li>
-                    <a href="#" class="journal flex align-center active text-clean" onclick="itemsMenu()" onmouseenter="openItemsMenu()">Journal</a>
+                    <a href="#" class="journal flex align-center active text-clean" onclick="toggleItemsMenu()" onmouseenter="openItemsMenu()">Journal</a>
                     <div class="items-modal">
                         <ul class="items-list clean-list flex">
                             <li><a href="#" class="text-clean">October 2016</a></li>
@@ -131,11 +131,12 @@
     <script>
         function toggleMenu() {
             document.body.classList.toggle('menu-open')
+            if(!document.body.classList.contains('menu-open') && document.body.classList.contains('items-menu-open')) toggleItemsMenu();
         }
         function toggleModal() {
             document.body.classList.toggle('modal-open')
         }
-        function itemsMenu() {
+        function toggleItemsMenu() {
             document.body.classList.toggle('items-menu-open')
         }
         function openItemsMenu() {
