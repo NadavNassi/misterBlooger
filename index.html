@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogin</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="modal-screen" onclick="toggleModal()"></div>
+    <div class="main-screen" onclick="toggleMenu()"></div>
+    <header class="main-header flex">
+        <div class="header-container flex container space-between align-center">
+            <div class="logo">Blogin</div>
+            <ul class="main-nav flex space-between align-center clean-list">
+                <li>
+                    <a href="#" class="journal flex align-center active text-clean" onclick="itemsMenu()" onmouseenter="openItemsMenu()">Journal</a>
+                    <div class="items-modal">
+                        <ul class="items-list clean-list flex">
+                            <li><a href="#" class="text-clean">October 2016</a></li>
+                            <li><a href="#" class="text-clean">January 2017</a></li>
+                            <li><a href="#" class="text-clean">April 2017</a></li>
+                            <li><a href="#" class="text-clean">July 2017</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="flex align-center text-clean">About</a>
+                </li>
+                <li>
+                    <a href="#" class="flex align-center text-clean">Work</a>
+                </li>
+                <li>
+                    <a href="#" class="flex align-center text-clean">Contact</a>
+                </li>
+            </ul>
+            <button class="btn-menu" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <main class="main-contant flex container flex-column align-center">
+        <div class="card flex align-center space-between">
+            <img src="imgs/001.jpg" class="card-img">
+            <div class="card-details flex">
+                <div class="card-title">Duis aute irure dolor inhenderit in voluptate.</div>
+                <div class="card-text flex flex-column">
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip
+                        ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur...
+                    </p>
+                </div>
+                <button class="card-button flex" onclick="toggleModal()">Continue Reading</button>
+            </div>
+        </div>
+        <div class="card flex align-center space-between">
+            <img src="imgs/002.jpg" class="card-img">
+            <div class="card-details flex">
+                <div class="card-title">Duis aute irure dolor inhenderit in voluptate.</div>
+                <div class="card-text flex flex-column">
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip
+                        ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur...
+                    </p>
+                </div>
+                <button class="card-button" onclick="toggleModal()">Continue Reading</button>
+            </div>
+        </div>
+        <div class="card flex align-center space-between">
+            <img src="imgs/003.png" class="card-img">
+            <div class="card-details flex">
+                <div class="card-title">Duis aute irure dolor inhenderit in voluptate.</div>
+                <div class="card-text flex flex-column">
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip
+                        ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur...
+                    </p>
+                </div>
+                <button class="card-button" onclick="toggleModal()">Continue Reading</button>
+            </div>
+    </main>
+    <section class="page-nav flex container align-center ">
+        <a href="#" class="btn-previous text-clean">Previous</a>
+        <a href="#" class="btn-next text-clean">Next</a>
+    </section>
+    <footer class="main-footer flex align-center">
+        <div class="footer-container flex flex-column align-center">
+            <div class="footer-logo">Blogin</div>
+            <small>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</small>
+            <ul class="social-nav flex align-center clean-list">
+                <li>
+                    <a href="#" class="fa facebook text-clean"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa twitter text-clean"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa insta text-clean"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa twitch text-clean"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="read-modal flex flex-column align-center">
+        <div class="modal-title">Join us to get access to the latest stories!</div>
+        <input type="email" name="" id="" placeholder="yours@mail.com" />
+        <div class="modal-btns flex">
+            <button class="submit-btn">Submit</button>
+            <button class="colse-modal" onclick="toggleModal()">Close</button>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open')
+        }
+        function toggleModal() {
+            document.body.classList.toggle('modal-open')
+        }
+        function itemsMenu() {
+            document.body.classList.toggle('items-menu-open')
+        }
+        function openItemsMenu() {
+            document.body.classList.add('items-menu-open')
+        }
+    </script>
+</body>
+
+</html>
