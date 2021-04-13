@@ -291,7 +291,7 @@ small {
 
 .fa {
   font-family: brands;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .fa.facebook::before {
@@ -396,7 +396,6 @@ small {
   body.items-menu-open .items-modal {
     z-index: 1;
     transform: translateY(0);
-    transition: 0.6s;
   }
   
   .items-list {
